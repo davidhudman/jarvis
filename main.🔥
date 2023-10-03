@@ -1,8 +1,0 @@
-# import mojo or python package for text to speech
-
-
-fn main():
-    print("Program started...")
-
-
-# initialize imports

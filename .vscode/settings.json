@@ -1,3 +1,7 @@
 {
-  "mojo.modularHomePath": "/home/vscode/.modular"
+  "mojo.modularHomePath": "/home/vscode/.modular",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none"
 }
