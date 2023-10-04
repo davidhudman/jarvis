@@ -25,3 +25,8 @@ source .env
 ```
 python3 app.py "What is the easiest way to make pancakes?"
 ```
+
+## results
+
+A file called openai.mp3 will be created with the answer to your question.
+
