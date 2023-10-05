@@ -15,7 +15,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
-    messages=[{"role": "user", "content": "write a 30 word response to the following question: " + input}]
+    messages=[{"role": "user", "content": "Respond like Jarvis would to Tony Stark and write a 30 word response to the following question: " + input}]
 )
 
 # print the message from the completion object
