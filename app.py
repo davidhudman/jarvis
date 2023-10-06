@@ -5,17 +5,22 @@ import sys
 import os
 from gtts import gTTS
 
-# read input from the cli python
-input = sys.argv[1]
-print(input)
+from record import createWav
 
 # set the openai api key
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
+createWav()
+
+file = open("speech.wav", "rb")
+transcription = openai.Audio.transcribe("whisper-1", file)
+transcription = transcription['text']
+print(transcription)
+
 
 completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
-    messages=[{"role": "user", "content": "Respond like Jarvis would to Tony Stark and write a 30 word response to the following question: " + input}]
+    messages=[{"role": "user", "content": "Write a 30 word response to the following question: " + transcription }]
 )
 
 # print the message from the completion object
